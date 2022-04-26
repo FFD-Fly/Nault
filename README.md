@@ -27,10 +27,15 @@ Then compare the output hash with the one listed in the corresponding checksums 
 
 #### Web App
 # Development Guide
+- Node Package Manager: [Install NPM](https://www.npmjs.com/get-npm)
+- Requires: `node version v12`
+- Angular CLI: `npm install -g @angular/cli`
+
 #### Clone repository and install dependencies
 ```bash
-git clone https://github.com/cronoh/nanovault
-cd nanovault
+git clone https://github.com/FFD-Fly/Nault.git
+cd Nault
+git checkout feida_ffd
 npm install
 ```
 
