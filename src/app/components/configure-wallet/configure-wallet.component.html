@@ -41,7 +41,7 @@
         </button>
       </div>
       <div class="uk-width-expand">
-        <button class="wallet-option" (click)="setPanel(panels.import); selectedImportOption = 'ledger';">
+        <!-- <button class="wallet-option" (click)="setPanel(panels.import); selectedImportOption = 'ledger';">
           <div class="icon">
             <svg width="120" height="120" version="1.1" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
               <g>
@@ -55,7 +55,7 @@
           </div>
           <h2>Use<br>Ledger</h2>
           <p>Nano S / Nano X</p>
-        </button>
+        </button> -->
         <button class="wallet-option" (click)="setPanel(panels.import); selectedImportOption = 'seed';">
           <div class="icon">
             <div class="seed">{{ exampleSeed }}</div>
@@ -165,7 +165,7 @@
               </div>
             </div>
           </div>
-          <h2>Nano<br>Mnemonic</h2>
+          <h2>FFD<br>Mnemonic</h2>
           <p>24 words</p>
         </button>
       </div>
@@ -338,7 +338,7 @@
               </div>
               <p>
                 <b>Ledger Device Not Connected</b><br>
-                Connect your Ledger device and make sure you have the nano app installed and running, then press the button below.<br>
+                Connect your Ledger device and make sure you have the ffd app installed and running, then press the button below.<br>
                 <span *ngIf=!ledgerService.supportsBluetooth>Bluetooth is currently not supported by your browser, please use Google Chrome or <a href="https://github.com/Nault/Nault/releases/latest" target="_blank" rel="noopener noreferrer">download the Desktop App</a></span>
               </p>
             </div>
@@ -372,11 +372,11 @@
       <div class="uk-width-1-1">
         <h3>Import Private Key</h3>
         <p>
-          Enter your nano account's private key below.
+          Enter your PAW private key below.
         </p>
         <div class="uk-inline uk-width-1-1">
           <a class="uk-form-icon uk-form-icon-flip" uk-icon="icon: camera" (click)="openQR('priv1','hash')" uk-tooltip title="Scan from QR code"></a>
-          <input type="text" class="uk-input" (keyup.enter)="setPasswordInit()" [(ngModel)]="importPrivateKeyModel" placeholder="64 hex character Nano Private Key">
+          <input type="text" class="uk-input" (keyup.enter)="setPasswordInit()" [(ngModel)]="importPrivateKeyModel" placeholder="64 hex character FFD Private Key">
         </div>
       </div>
     </div>
@@ -388,7 +388,7 @@
         </p>
         <div class="uk-inline uk-width-1-1">
           <a class="uk-form-icon uk-form-icon-flip" uk-icon="icon: camera" (click)="openQR('expanded1','hash')" uk-tooltip title="Scan from QR code"></a>
-          <input type="text" class="uk-input" (keyup.enter)="setPasswordInit()" [(ngModel)]="importExpandedKeyModel" placeholder="64 or 128 hex character Nano Expanded Private Key">
+          <input type="text" class="uk-input" (keyup.enter)="setPasswordInit()" [(ngModel)]="importExpandedKeyModel" placeholder="64 or 128 hex character FFD Expanded Private Key">
         </div>
       </div>
     </div>
@@ -507,7 +507,7 @@
   </div>
   <div class="uk-card-body">
     <p>
-      Your wallet has been created and you are ready to send and receive nano!<br>
+      Your wallet has been created and you are ready to send and receive ffd!<br>
       It will lock after a certain amount of inactivity which can be changed in the <a routerLink="/configure-app" routerLinkActive="active">app settings</a>.
     </p>
   </div>

@@ -13,13 +13,10 @@ const nacl = window['nacl'];
 @Injectable()
 export class NanoBlockService {
   representativeAccounts = [
-    'nano_1x7biz69cem95oo7gxkrw6kzhfywq4x5dupw4z1bdzkb74dk9kpxwzjbdhhs', // NanoCrawler
-    'nano_1zuksmn4e8tjw1ch8m8fbrwy5459bx8645o9euj699rs13qy6ysjhrewioey', // Nanowallets.guide
-    'nano_3chartsi6ja8ay1qq9xg3xegqnbg1qx76nouw6jedyb8wx3r4wu94rxap7hg', // Nano Charts
-    'nano_1ninja7rh37ehfp9utkor5ixmxyg8kme8fnzc4zty145ibch8kf5jwpnzr3r', // My Nano Ninja
-    'nano_1iuz18n4g4wfp9gf7p1s8qkygxw7wx9qfjq6a9aq68uyrdnningdcjontgar', // NanoTicker / Json
-    'nano_3power3gwb43rs7u9ky3rsjp6fojftejceexfkf845sfczyue4q3r1hfpr3o', // PowerNode
-    'nano_1ookerz3adg5rxc4zwwoshim5yyyihf6dpogjihwwq6ksjpq7ea4fuam5mmc', // Nanolooker.com
+    'ffd_3omcbbqoat4z8pweecke4j8rtwt5qee73urdnf3y6g4kezm5o3eoegjnj7hx', // NanoCrawler
+    'ffd_1sxbmmqkxxhpuec7ok7eqf6ckdda1rherscgo78w9kxc1zy837aohqcamq5x', // Nanowallets.guide
+    'ffd_3p1114twr7znfqarkx7dmg4ub5khxp3p4qkedpcr8t34n4xyori6ad9eg9ff', // Nano Charts
+    'ffd_1aurepm61ji3chxey16wdjuy6ra7f14qwia4cp7oneifp83ioo3hek16mu4t', // My Nano Ninja
   ];
 
   zeroHash = '0000000000000000000000000000000000000000000000000000000000000000';

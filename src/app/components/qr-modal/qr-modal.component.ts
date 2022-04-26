@@ -20,7 +20,8 @@ export class QrModalComponent implements OnInit {
   @Input() type: QRType;
   availableDevices: MediaDeviceInfo[];
   currentDevice: MediaDeviceInfo = null;
-  nano_scheme = /^(xrb|nano|nanorep|nanoseed|nanokey):.+$/g;
+  nano_scheme = /^(ffd|ffdrep|ffdseed|ffdkey):.+$/g;
+  // nano_scheme = /^(xrb|nano|nanorep|nanoseed|nanokey):.+$/g;
 
   formatsEnabled: BarcodeFormat[] = [
     BarcodeFormat.CODE_128,
@@ -75,9 +76,13 @@ export class QrModalComponent implements OnInit {
       const url = new URL(resultString);
       content = url.pathname;
 
-      if (['nano:', 'nanorep:', 'xrb:'].includes(url.protocol) && this.util.account.isValidAccount(url.pathname)) {
-        type = 'account';
-      } else if (['nanoseed:', 'nanokey:'].includes(url.protocol) && this.util.nano.isValidHash(url.pathname)) {
+      // if (['nano:', 'nanorep:', 'xrb:'].includes(url.protocol) && this.util.account.isValidAccount(url.pathname)) {
+      //   type = 'account';
+      // } else if (['nanoseed:', 'nanokey:'].includes(url.protocol) && this.util.nano.isValidHash(url.pathname)) {
+
+         if (['ffd:', 'ffdrep:'].includes(url.protocol) && this.util.account.isValidAccount(url.pathname)) {
+            type = 'account';
+          } else if (['ffdseed:', 'ffdkey:'].includes(url.protocol) && this.util.nano.isValidHash(url.pathname)) {
         type = 'hash';
       }
     } else {

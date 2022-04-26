@@ -58,6 +58,15 @@ export class ConfigureWalletComponent implements OnInit {
   indexMax = INDEX_MAX;
 
   selectedImportOption = 'seed';
+  importOptions = [
+    { name: 'FFD Seed', value: 'seed' },
+    { name: 'FFD Mnemonic Phrase', value: 'mnemonic' },
+    { name: 'BIP39 Mnemonic Phrase', value: 'bip39-mnemonic' },
+    { name: 'FFDVault Wallet File', value: 'file' },
+    { name: 'Ledger Nano S / Nano X', value: 'ledger' },
+    { name: 'Private Key', value: 'privateKey' },
+    { name: 'Expanded Private Key', value: 'expandedKey' },
+  ];
 
   ledgerStatus = LedgerStatus;
   ledger = this.ledgerService.ledger;
@@ -159,11 +168,11 @@ export class ConfigureWalletComponent implements OnInit {
 
     if (this.ledger.status === LedgerStatus.NOT_CONNECTED) {
       this.ledgerService.resetLedger();
-      return this.notifications.sendWarning(`Failed to connect the Ledger device. Make sure the nano app is running on the Ledger. If the error persists: Check the <a href="https://docs.nault.cc/2020/08/04/ledger-guide.html#troubleshooting" target="_blank" rel="noopener noreferrer">troubleshooting guide</a>`, { identifier: 'ledger-error', length: 0 });
+      return this.notifications.sendWarning(`Failed to connect the Ledger device. Make sure the FFD app is running on the Ledger. If the error persists: Check the <a href="https://docs.nault.cc/2020/08/04/ledger-guide.html#troubleshooting" target="_blank" rel="noopener noreferrer">troubleshooting guide</a>`, { identifier: 'ledger-error', length: 0 });
     }
 
     if (this.ledger.status === LedgerStatus.LOCKED) {
-      return this.notifications.sendWarning(`Unlock your Ledger device and open the nano app to continue`);
+      return this.notifications.sendWarning(`Unlock your Ledger device and open the FFD app to continue`);
     }
 
     if (this.ledger.status === LedgerStatus.READY) {

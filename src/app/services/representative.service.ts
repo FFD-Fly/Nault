@@ -160,11 +160,11 @@ export class RepresentativeService {
       let status = 'none';
       let label;
 
-      if (percent.gte(3)) {
+      if (percent.gte(30)) {
         status = 'alert'; // Has extremely high voting weight
         repStatus.veryHighWeight = true;
         repStatus.changeRequired = true;
-      } else if (percent.gte(2)) {
+      } else if (percent.gte(20)) {
         status = 'warn'; // Has high voting weight
         repStatus.highWeight = true;
       }
@@ -376,7 +376,7 @@ export class RepresentativeService {
 
     const newRepList = list.map(entry => {
       if (entry.id.indexOf('xrb_') !== -1) {
-        entry.id = entry.id.replace('xrb_', 'nano_');
+        entry.id = entry.id.replace('xrb_', 'ffd_');
       }
       return entry;
     });
@@ -459,38 +459,38 @@ export class RepresentativeService {
   // Bad representatives hardcoded to be avoided. Not visible in the user rep list
   // tslint:disable-next-line:member-ordering
   nfReps = [
-    {
-      id: 'nano_3arg3asgtigae3xckabaaewkx3bzsh7nwz7jkmjos79ihyaxwphhm6qgjps4',
-      name: 'Nano Foundation #1',
-    },
-    {
-      id: 'nano_1stofnrxuz3cai7ze75o174bpm7scwj9jn3nxsn8ntzg784jf1gzn1jjdkou',
-      name: 'Nano Foundation #2',
-    },
-    {
-      id: 'nano_1q3hqecaw15cjt7thbtxu3pbzr1eihtzzpzxguoc37bj1wc5ffoh7w74gi6p',
-      name: 'Nano Foundation #3',
-    },
-    {
-      id: 'nano_3dmtrrws3pocycmbqwawk6xs7446qxa36fcncush4s1pejk16ksbmakis78m',
-      name: 'Nano Foundation #4',
-    },
-    {
-      id: 'nano_3hd4ezdgsp15iemx7h81in7xz5tpxi43b6b41zn3qmwiuypankocw3awes5k',
-      name: 'Nano Foundation #5',
-    },
-    {
-      id: 'nano_1awsn43we17c1oshdru4azeqjz9wii41dy8npubm4rg11so7dx3jtqgoeahy',
-      name: 'Nano Foundation #6',
-    },
-    {
-      id: 'nano_1anrzcuwe64rwxzcco8dkhpyxpi8kd7zsjc1oeimpc3ppca4mrjtwnqposrs',
-      name: 'Nano Foundation #7',
-    },
-    {
-      id: 'nano_1hza3f7wiiqa7ig3jczyxj5yo86yegcmqk3criaz838j91sxcckpfhbhhra1',
-      name: 'Nano Foundation #8',
-    },
+    // {
+    //   id: 'nano_3arg3asgtigae3xckabaaewkx3bzsh7nwz7jkmjos79ihyaxwphhm6qgjps4',
+    //   name: 'Nano Foundation #1',
+    // },
+    // {
+    //   id: 'nano_1stofnrxuz3cai7ze75o174bpm7scwj9jn3nxsn8ntzg784jf1gzn1jjdkou',
+    //   name: 'Nano Foundation #2',
+    // },
+    // {
+    //   id: 'nano_1q3hqecaw15cjt7thbtxu3pbzr1eihtzzpzxguoc37bj1wc5ffoh7w74gi6p',
+    //   name: 'Nano Foundation #3',
+    // },
+    // {
+    //   id: 'nano_3dmtrrws3pocycmbqwawk6xs7446qxa36fcncush4s1pejk16ksbmakis78m',
+    //   name: 'Nano Foundation #4',
+    // },
+    // {
+    //   id: 'nano_3hd4ezdgsp15iemx7h81in7xz5tpxi43b6b41zn3qmwiuypankocw3awes5k',
+    //   name: 'Nano Foundation #5',
+    // },
+    // {
+    //   id: 'nano_1awsn43we17c1oshdru4azeqjz9wii41dy8npubm4rg11so7dx3jtqgoeahy',
+    //   name: 'Nano Foundation #6',
+    // },
+    // {
+    //   id: 'nano_1anrzcuwe64rwxzcco8dkhpyxpi8kd7zsjc1oeimpc3ppca4mrjtwnqposrs',
+    //   name: 'Nano Foundation #7',
+    // },
+    // {
+    //   id: 'nano_1hza3f7wiiqa7ig3jczyxj5yo86yegcmqk3criaz838j91sxcckpfhbhhra1',
+    //   name: 'Nano Foundation #8',
+    // },
   ];
 
 }

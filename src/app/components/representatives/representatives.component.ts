@@ -287,13 +287,15 @@ export class RepresentativesComponent implements OnInit {
     if (this.changingRepresentatives) {
       return; // Already running
     }
+
     if (this.walletService.isLocked()) {
       const wasUnlocked = await this.walletService.requestWalletUnlock();
 
       if (wasUnlocked === false) {
         return;
-      }
+      }     
     }
+    
     if (!accounts || !accounts.length) {
       return this.notifications.sendWarning(`You must select at least one account to change`);
     }
