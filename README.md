@@ -26,6 +26,49 @@ If you want to verify the binary checksum there are plenty of apps to do this. O
 Then compare the output hash with the one listed in the corresponding checksums file that you download.
 
 #### Web App
+# Development Guide
+#### Clone repository and install dependencies
+```bash
+git clone https://github.com/cronoh/nanovault
+cd nanovault
+npm install
+```
+
+#### Run the wallet in dev mode
+```bash
+npm run wallet:dev
+```
+
+## Build Wallet (For Production)
+Build a production version of the wallet for web:
+```bash
+npm run wallet:build
+```
+
+Build a production version of the wallet for desktop: *(Required for all desktop builds)*
+```bash
+npm run wallet:build-desktop
+```
+
+## Desktop Builds
+
+*All desktop builds require that you have built a desktop version of the wallet before running!*
+
+Run the desktop wallet in dev mode:
+```bash
+npm run desktop:dev
+```
+
+Build the desktop wallet for your local OS (Will be in `dist-desktop`):
+```bash
+npm run desktop:local
+```
+
+Build the desktop wallet for Windows+Mac+Linux (May require dependencies for your OS [View them here](https://www.electron.build/multi-platform-build)):
+```bash
+npm run desktop:full
+```
+
 You can also use Nault from any device on the web at [nault.cc](https://nault.cc).
 
 Both the desktop (recommended) and web version supports the Ledger Nano hardware wallet. For help using it, please refer to [this guide](https://docs.nault.cc/2020/08/04/ledger-guide.html).
