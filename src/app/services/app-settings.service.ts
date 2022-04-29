@@ -71,7 +71,7 @@ export class AppSettingsService {
       name: 'feida_ffd',
       value: 'feida',
       api: 'http://192.168.1.46:8088/proxy',
-      ws: 'ws://ws.ffd.one/ws',
+      ws: 'ws://192.168.1.46:8087/ws',
       auth: null,
       shouldRandom: true,
     }
@@ -85,7 +85,7 @@ export class AppSettingsService {
   }, [
     'proxy.nanos.cc/proxy',
     'node.somenano.com',
-    'feida.ffd.one'
+    'zip.ffd.one'
   ]);
 
   constructor(
