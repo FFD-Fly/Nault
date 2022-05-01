@@ -28,26 +28,26 @@
             ],
             "scripts": [],
             "allowedCommonJsDependencies": [
-               "qrcode",
-               "bip39",
-               "@zxing/library",
-               "bignumber.js",
-               "nanocurrency",
-               "hw-app-nano",
-               "crypto-js",
-               "blakejs",
-               "nanocurrency-web",
-               "bignumber.js",
-               "u2f-api",
-               "create-hash",
-               "randombytes",
-               "pbkdf2",
-               "zxcvbn",
-               "url",
-               "punycode",
-               "querystring",
-               "hw-transport-webusb",
-               "hw-transport-web-ble"
+              "qrcode",
+              "bip39",
+              "@zxing/library",
+              "bignumber.js",
+              "nanocurrency",
+              "hw-app-nano",
+              "crypto-js",
+              "blakejs",
+              "nanocurrency-web",
+              "bignumber.js",
+              "u2f-api",
+              "create-hash",
+              "randombytes",
+              "pbkdf2",
+              "zxcvbn",
+              "url",
+              "punycode",
+              "querystring",
+              "hw-transport-webusb",
+              "hw-transport-web-ble"
             ]
           },
           "configurations": {
@@ -188,5 +188,8 @@
     "@schematics/angular:directive": {
       "prefix": "app"
     }
+  },
+  "cli": {
+    "analytics": "a4a5a486-9028-493c-94e7-97b20441fc5c"
   }
 }
